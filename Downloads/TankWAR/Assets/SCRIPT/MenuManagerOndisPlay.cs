@@ -1,0 +1,42 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class MenuManagerOndisPlay : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+    public void onClickPause()
+    {
+        Time.timeScale = 0;
+    }
+    public void onClickResume()
+    {
+        Time.timeScale = 1;
+    }
+    public void OnClickExit()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+    public void OnClickRestart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex );
+
+        Time.timeScale = 1;
+    }
+   
+
+
+
+
+}
